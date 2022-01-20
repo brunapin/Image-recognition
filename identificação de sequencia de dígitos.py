@@ -83,10 +83,6 @@ def Prever_digitos(input_image, model_name, labelmap, cortes):
     with open(labelmap, "rb") as arquivo_tradutor:
         lb = pickle.load(arquivo_tradutor)
     modelo = load_model(model_name)
-
-    ################## confirmar essa parte ######################
-    if (modelo is None):
-        raise Exception("Modelo não encontrado")
                
     list_digit_final = (
         threshold(
